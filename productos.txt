@@ -1,0 +1,4 @@
+{"id":1,"title":"Escuadra","thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-512.png","price":45}
+{"id":2,"title":"Calculadora","thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-512.png","price":56}
+{"id":3,"title":"Globo terraqueo","thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-512.png","price":67}
+

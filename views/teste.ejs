@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 align="center">Lista de productos</h2>
+    
+    
+  <div align="center">
+    <form action="/productos" method="post">
+      <p>Titulo:</p>
+      <input name="titulo"><br />
+      <p>Ruta de foto (https://cdn3.iconfinder.com/data/icons/img/imgX):</p>
+      <input name="rutaFoto"><br />
+      <p>precio:</p>
+      <input name="precio",type="number"><br />
+
+      <button type="submit">Enviar</button>
+  </form>
+  <br><br>
+    <table>
+        <tr>
+          <th>Titulo</th>
+          <th>Precio</th>
+          
+        </tr>
+        <% productos.data.forEach(function(producto){%>
+        <tr>
+          
+            <td><%= producto.title%></td>
+            <td><%= producto.price%></td>
+           
+            <td><img src=<%= producto.thumbnail%> alt='login' style='width:20px; height:20px;'></td>
+
+         
+        </tr>
+        <%})%> 
+    </table>
+    <form action="http://127.0.0.1:8080/productos/pug">
+        <input type="submit" value="Ir a web con pug" />
+    </form>
+
+<br><br>
+    <div id="messages"></div>
+    <form id="form" onsubmit="return addMessage(this)">
+        <input type="text" name="username" id="username">
+        <input type="text" name="text" id="text" placeholder="">
+        <input id="submit" type="submit" value="Enviar">
+        
+        
+    </form>
+
+  </div>
+  
+  
+  
+    
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script defer src="/front.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+html 
+    head 
+        title='Mi primera plantilla pug'
+
+    body(style='margin:0; padding:0; background-color:#F2F2F2;')
+        
+        center
+          p Lista de productos
+          table()
+            thead
+              tr
+                th Nombre
+                th Precio
+                th Imagen
+                 
+            tbody
+              each producto in productosPug
+                tr
+                  td #{producto.title}
+                  td #{producto.price}
+                  td 
+                    img(src=producto.thumbnail alt='login' style='width:20px; height:20px;')
+
+          form(action="http://127.0.0.1:8080/productos/ejs") 
+            button Ir a web con ejs
+                  
